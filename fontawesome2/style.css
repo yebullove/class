@@ -1,0 +1,24 @@
+.section::after{
+  content: "\f2e7";
+  /* fontawesome 5버전를 CSS에서 사용하기위해서는
+  font-family,font-weight가 같이 들어가야함 */
+  /* font-family: "Font Awesome 5 Pro"; */
+  font-family: "Font Awesome 5 Free"; 
+  /* 무료버전사용시에는 Free로 변경함 */
+  font-weight: 900;
+}
+
+.wrap2{
+  position: relative;
+  margin-top: 50px;
+  width: 400px; height: 400px; 
+  background-color: palevioletred;
+}
+.wrap2 .section2{
+  position: absolute;
+  left: calc(50% - 50px); 
+  top: calc(50% - 50px);
+  /* transform: translate(-50%,-50%); */
+  width: 100px; height: 100px;
+  background-color: blue;
+}
