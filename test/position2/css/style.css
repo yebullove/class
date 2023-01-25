@@ -1,0 +1,191 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+.치료::after{content: ""; clear: both; display: block;}
+
+.전체{color: red;
+  width: 1000px; 
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: gray;
+  height: 600px;
+}
+.전체 .첫째{
+  background-color: #B08BBB;
+  padding: 20px;
+}
+.전체 .첫째 .첫자{
+  background-color: #3C79F5;
+  width: 32%;
+  margin-right: 2%;
+  height: 200px;
+  float: left;
+}
+/*요기까진 체크해쬬*/
+
+.전체 .첫째 .첫자.첫자1{
+  position: relative;
+  overflow: hidden;
+}
+.전체 .첫째 .첫자.첫자1 .하{
+  position: relative;
+  height: 100%;
+  background-image: url(../image/img1.jpg);
+  background-size: cover;
+  background-position: center center;
+  /* background-position: center; */
+}
+
+.전체 .첫째 .첫자.첫자1 .하 h4{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+.전체 .첫째 .첫자.첫자1 .상{
+  height: 100%;
+  background-image: url(../image/img2.jpg);
+  background-size: cover;
+  background-position: center;
+  /* position: absolute;되면 자식의 공간만 차지
+  넓이 다시 설정함
+  */
+  position: absolute;
+  left: 100%; top: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.전체 .첫째 .첫자.첫자1:hover .상{
+  left: 0;
+}
+
+.전체 .첫째 .첫자.첫자1 .상 h4{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+.전체 .첫째 .첫자.첫자2{
+  position: relative;
+  overflow: hidden;
+}
+.전체 .첫째 .첫자.첫자2>div{
+  height: 100%;
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+}
+.전체 .첫째 .첫자.첫자2>div h4{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.전체 .첫째 .첫자.첫자2 .상{
+  background-image: url(../image/img3.jpg);
+  background-size: cover;
+  background-position: center;
+  /* z-index는 position이있어야 사용가능
+  (relative, absolute, fixed) */
+  z-index: 2;
+  top: -100%;
+  transition: 0.3s;
+}
+
+.전체 .첫째 .첫자.첫자2:hover .상{
+  top: 0;
+}
+
+.전체 .첫째 .첫자.첫자2 .상 h4{}
+
+.전체 .첫째 .첫자.첫자2 .하{
+  background-image: url(../image/img4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.전체 .첫째 .첫자.첫자2 .하 h4{}
+
+.전체 .첫째 .첫자.첫자3{
+  margin-right: 0;
+  position: relative;
+}
+.전체 .첫째 .첫자.첫자3>div{
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+}
+
+.전체 .첫째 .첫자.첫자3>div h4{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+/*세미체크*/
+
+.전체 .첫째 .첫자.첫자3 .상{
+  background-image: url(../image/img5.jpg);
+  transition: 0.3s;
+  z-index: 10;
+  opacity: 0;
+  transform: scale(0.3);
+  transition-timing-function: cubic-bezier(0.37, 0.33, 0.17, 1.73);
+}
+.전체 .첫째 .첫자.첫자3:hover .상{
+  opacity: 1;
+  transform: scale(1);
+  border-radius:50%;
+}
+
+.전체 .첫째 .첫자.첫자3 .하{
+  background-image: url(../image/img6.jpg);
+}
+
+
+.전체 .둘째{
+  background-color: green;
+  /* 
+  %의 기준
+  width --> 부모(.전체)의 넓이 
+  height --> 부모(.전체)의 높이 
+            단 부모가 높이값이 있어야한다
+  padding, margin은 상하좌우 모두  모두의 넓이         
+            */
+  width: 30%;
+  height: 30%;
+  padding: 5%;
+  margin-top: 5%;
+  
+}
+
+.인라인박스{
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  border: 3px solid black;
+  margin: 30px; top: 30px;
+  text-align: center;
+  color: rgb(31, 26, 19);
+  background-color: aqua;
+}
+
+.인라인박스 .box1{
+  position: absolute;
+  width: 40%;
+  padding-right: 2%;
+  left: 50px; top: 60px;
+  border: #3C79F5 solid red;
+
+}
+
+.인라인박스 .box2{
+  width: 40%;
+  
+  position: absolute;
+  left: 50px; top: 50px;
+  right: 300px;
+}

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* reset */
+/* 폰트크기의 기본값은 16px */
+h1,h2,h3,h4,h5,h6{
+  font-size: 16px;
+  font-weight: normal; /* 폰트두께 */
+}
+a{text-decoration: none; /* 밑줄 */
+  color:#223344;  /* color:#234 */
+  /* color:#113345; 줄이지 못함 */
+}
+
+
+
+.약::after{content: ""; clear:both; display: block;
+}
+
+.전체 {
+  background-color: #5BC0F8;
+  width: 1000px;
+  margin: 30px auto 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.전체>div + div{margin-top: 30px;}
+
+.전체 .첫째 {
+  background-color: #FFB26B;
+  padding: 20px;
+}
+.전체 .첫째:hover{
+  color: green;
+}
+.전체 .첫째 .첫자{
+  background-color: #3C79F5;
+  width: 49%;
+  height: 200px;
+  float: left;
+
+}
+.전체 .첫째 .첫자.첫째자식1{
+  margin-right: 2%;
+}
+.전체 .첫째 .첫자.첫째자식2{}
+
+
+
+
+.전체 .둘째 {
+  background-color: #C85C8E;
+}
+.전체 .둘째 .앵커{
+  background-color: blue;
+}
+
+.전체 .둘째 p{ width: 150px;
+margin-top: 20px;
+}
+.전체 .둘째 p a{}
+.전체 .둘째 p a img{width: 100%;}
+/* 인라인요소는 공간을 인식하지 못한다
+그래서 넓이, 높이값을 주어도 적용되지 않습니다
+예외가 있습니다. img, button 테그는 
+인라인요소이지만 넓이와 높이가 적용됩니다 
+
+인라인요소안에는 인라인요소만 들어간다
+(인라인요소안에 블럭요소 들어가지 않음)
+블럭요소안에는 인라인요소, 블럭요소 
+모두 들어감
+span p (x)
+p span(o)
+span img(o)
+*/
+
+
+
+
+.전체 .세째 {
+  background-color: #C85C8E;
+}
